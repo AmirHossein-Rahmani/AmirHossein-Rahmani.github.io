@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Content - AmirHossein Rahmani</title>
+    <meta name="description" content="Papers, books, videos and educational content by AmirHossein Rahmani">
+    <meta name="keywords" content="research papers, books, videos, content, AmirHossein Rahmani">
+    <meta property="og:title" content="Content - AmirHossein Rahmani">
+    <meta property="og:description" content="Papers, books, videos and educational content">
+    <meta name="twitter:title" content="Content - AmirHossein Rahmani">
+    <meta name="twitter:description" content="Papers, books, videos and educational content">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Crimson+Text:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2a2a2a;
+            --secondary-color: #d4d4d4;
+            --accent-color: #5a5a5a;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: url('https://app.trickle.so/storage/public/images/usr_17bea83758000001/63ab105e-f5d2-4559-b61a-ef77bcea5319.png') center center no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-weight: 700;
+        }
+        
+        #root {
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes zoomOut {
+            from {
+                background-size: 120%;
+            }
+            to {
+                background-size: 100%;
+            }
+        }
+        
+        body {
+            animation: zoomOut 2s ease-out forwards;
+        }
+    }
+
+
+    </style>
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/ContentHeader.js"></script>
+    <script type="text/babel" src="components/ContentSection.js"></script>
+    <script type="text/babel" src="components/ScrollToTop.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="content-app.js"></script>
+</body>
+</html>
