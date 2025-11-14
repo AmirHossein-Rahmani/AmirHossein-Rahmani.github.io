@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>CV - AmirHossein Rahmani</title>
+    <meta name="description" content="Curriculum Vitae of AmirHossein Rahmani, economist and civil engineer.">
+    <meta name="keywords" content="CV, resume, AmirHossein Rahmani, economist, civil engineer">
+    <meta property="og:title" content="CV - AmirHossein Rahmani">
+    <meta property="og:description" content="Curriculum Vitae of AmirHossein Rahmani">
+    <meta name="twitter:title" content="CV - AmirHossein Rahmani">
+    <meta name="twitter:description" content="Curriculum Vitae of AmirHossein Rahmani">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Crimson+Text:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2a2a2a;
+            --secondary-color: #d4d4d4;
+            --accent-color: #5a5a5a;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            color: var(--text-primary);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-weight: 700;
+        }
+    }
+    
+    @layer components {
+        .btn-glass {
+            background: rgba(42, 42, 42, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body class="bg-gray-50">
+    <div id="loading-screen" class="fixed inset-0 bg-[#BEC0BD] z-[9999] flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <img 
+                src="https://app.trickle.so/storage/public/images/usr_17bd142760000001/c11a8e60-8fbf-4a49-9135-41f4af23b803.png" 
+                alt="Loading" 
+                class="h-24 w-auto mx-auto mb-4 animate-pulse"
+            />
+            <div class="flex gap-2 justify-center">
+                <div class="w-3 h-3 bg-[#2a2a2a] rounded-full animate-bounce" style="animation-delay: 0s"></div>
+                <div class="w-3 h-3 bg-[#2a2a2a] rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                <div class="w-3 h-3 bg-[#2a2a2a] rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="treeCanvas"></canvas>
+    <div id="root"></div>
+    
+    <script src="utils/treeAnimation.js"></script>
+    <script type="text/babel" src="components/CVHeader.js"></script>
+    <script type="text/babel" src="components/CVContent.js"></script>
+    <script type="text/babel" src="components/ScrollToTop.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="cv-app.js"></script>
+</body>
+</html>
